@@ -23,15 +23,19 @@ int main(void) {
 	int is_blacklisted;
 	
 	printf("Enter order amount: ");
-    scanf("%f", &order_amount);
+    scanf(" %f", &order_amount);
 	
 	printf("Is customer a premium member? (1 = Yes, 0 = No): ");
-    scanf("%d", &is_premium);
+    scanf(" %d", &is_premium);
 	
 	printf("Is customer blacklisted? (1 = Yes, 0 = No): ");
-    scanf("%d", &is_blacklisted);
+    scanf(" %d", &is_blacklisted);
 	
-	// Complete the rest of the code
+	if ((order_amount > 100 || is_premium == 1) && !is_blacklisted) {
+        printf("Discount Applied\n");
+    } else {
+        printf("No Discount\n");
+    }
 
 	return 0;
 }
