@@ -86,6 +86,8 @@ int main(void) {
             max_loan = income * 60;
             if (income >= 5000 && credit_score >= 700){
                 approved = true;
+            } else {
+                printf("Loan status: Rejected (Criteria not met)\n");
             }
             break;
         case 2:
@@ -93,6 +95,8 @@ int main(void) {
             max_loan = income * 20;
             if (income >= 3000 && credit_score >= 650){
                 approved = true;
+            } else {
+                printf("Loan status: Rejected (Criteria not met)\n");
             }
             break;
         case 3:
@@ -100,6 +104,8 @@ int main(void) {
             max_loan = income * 10;
             if (income >= 2000 && credit_score >= 600){
                 approved = true;
+            } else {
+                printf("Loan status: Rejected (Criteria not met)\n");
             }
             break;
 
