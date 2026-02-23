@@ -73,3 +73,30 @@ int main(void) {
 	
 	return 0;
 }
+/* OUTPUT:
+===== Basic Boolean Operations =====
+a = 1, b = 0
+a && b (AND): 0
+a || b (OR): 1
+!a (NOT): 0
+
+===== Compound Boolean Operations =====
+a && !b: 1
+!a || b: 0
+!(a && b): 1
+
+===== Using Boolean Variables =====
+c = a && !b: 1
+c is true, this code block runs
+
+===== Short-Circuit Evaluation =====
+First expression: if a is false, b is not evaluated in (a && b)
+Second expression: if a is true, b is not evaluated in (a || b)
+This block runs because true || anything is true
+
+===== Weather Example =====
+Weather conditions:
+Raining: 1, Windy: 0, Cold: 1
+Stay indoors: 1
+Take umbrella: 1
+Wear jacket: 1*/
