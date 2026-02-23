@@ -57,7 +57,17 @@ int main(void) {
 
 	// complete the rest of the code
 	switch (choice) {
-		case :
+		case 1:
+			printf("Current balance: %.2f",balance);
+			break;
+		case 2:
+			scanf("%d", &amount);
+			if (amount > 0) {
+				balance = balance + amount;
+				printf(Desposited "%.2f",amount)
+			}
+			break;
+		case 3:
 			break;
 		default:
 			printf("Invalid choice. Please try again.\n");
