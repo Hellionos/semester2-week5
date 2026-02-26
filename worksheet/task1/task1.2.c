@@ -11,7 +11,12 @@
 
 int main(void) {
  
+	int input1;
 	printf("--- Average Calculator ---\n");
+	printf("Enter a -1 to exit.\n");
+	printf("Enter a postive number: ");
+	scanf("%d",&input1);
+	
     	
 	return 0;
 }
