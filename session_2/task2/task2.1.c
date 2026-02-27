@@ -20,8 +20,20 @@ int main(void) {
     
     // TODO: Keep asking until valid input is provided
     // Use an appropriate loop structure
-    
+    do {
         printf("Enter temperature with scale (e.g., 23.5C or 75F): ");
+        fgets(input,sizeof(input),stdin);
+        input[strcspn(input, "\n")] = 0;
+        sscanf(input, "%f%c", &temperature, &scale);
+        scale = toupper(scale);
+        if (scale == 'C' || scale == 'F'){
+            valid_input = 1;
+        }
+    } while (valid_input==0);
+    if (scale == 'C'){
+        temperature = temperature*9/5 + 32;
+    }
+
         
         // TODO: Use fgets to read the input
         
