@@ -28,3 +28,7 @@ int main() {
 
     return 0;
 }
+
+/*@Hellionos ➜ /workspaces/semester2-week5/session_2/example (main) $ ./example2
+Source: hello world
+Copied: hello world*/
