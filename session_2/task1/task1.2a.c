@@ -9,9 +9,29 @@ int main(void){
  * until 'secure123' is entered.
  */
      char password[50];
-	 
+     char truepassword[50]="secure123";
+	 int correct = 0;
+
 	 // compare using strcmp(str1,str2) from week 4
 	 // complete the rest of the code here
+     while(correct==0){
+        printf("Enter the password: ");
+        scanf(" %s ", password);
+        if (strcmp(password,truepassword)==0){
+            printf("Password is correct!\n");
+            break;
+        }
+     }
 	
     return 0;
 }
+
+
+/*Example:
+int x;
+printf("Enter number of iteration: ");
+scanf("%d", &x);
+while(x > 0){
+ printf("%d ", x);
+ x--;
+}*/
