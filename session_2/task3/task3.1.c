@@ -20,6 +20,7 @@ int main(void) {
     int playing = 1;     // Flag to control the main game loop
     
     // Seed the random number generator
+    while (playing == 1){
     srand(time(NULL));
     
     printf("=== Number Guessing Game ===\n");
@@ -27,23 +28,32 @@ int main(void) {
     
     // TODO: Generate a random number between min and max
     // Hint: target = min + rand() % (max - min + 1);
-    
+    target = min + rand() % (max - min + 1);
     // TODO: Implement the main game loop
     // This should continue until the person decides to quit
-    
-        // Reset number of guesses for a new game
-        num_guesses = 0;
-        
-        // TODO: Implement the guessing loop
-        // This should continue until the correct number is guessed
-        
+        do {
+            // Reset number of guesses for a new game
+            num_guesses = 0;
+            // TODO: Implement the guessing loop
+            // This should continue until the correct number is guessed
+            
             printf("Enter your guess: ");
+            fgets(input,sizeof(input),stdin);
+            input[strcspn(input, "\n")] = 0;
+            guess = atoi(input);
+            num_guesses++;
+            if (guess == target){
+                printf("Correct!\n");
+            } else if (guess < target){
+                printf("Too low\n");
+            } else if (guess > target){
+                printf("Too high\n");
+            }
+        } while (guess != target);
             
             // TODO: Read and process the input
             // Use fgets() to read input
             // Use atoi() to convert to integer
-            
-            num_guesses++;
             
             // TODO: Check if the guess is correct, too high, or too low
             // Provide appropriate in-game feedback
@@ -53,8 +63,12 @@ int main(void) {
         
         // TODO: Ask if the person wants to play again
         // Update the 'playing' flag based on the answer
-    
-    
-    printf("\nThanks for playing!\n");
+    printf("Do you want to play again?(yes/no)");
+    fgets(input,sizeof(input),stdin);
+    if (input=="no");
+        printf("\nThanks for playing!\n");
+        return 0;
+    printf("We'll play again then\n");
+    }
     return 0;
 }
