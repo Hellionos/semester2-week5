@@ -18,3 +18,14 @@ int main( void ) {
     
     return 0;
 }
+
+/*@Hellionos ➜ /workspaces/semester2-week5/session_2/example (main) $ ./example1
+g
+Read: g
+vbhb
+Read: vbhb
+fawdsfwafetg4t
+Read: fawdsfwafetg4t
+ ^[[18~7^[OS  rt 43t
+Read:  7S  rt 43t
+.gew*/
