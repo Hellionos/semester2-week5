@@ -11,7 +11,7 @@
 
 int main(void) {
     char input[50];
-    float temperature;
+    float temperature=0;
     char scale;
     int valid_input = 0;
     float converted_temp;
@@ -28,13 +28,18 @@ int main(void) {
         scale = toupper(scale);
         if (scale == 'C' || scale == 'F'){
             valid_input = 1;
+        } else {
+            printf("Error, invalid input\n");
         }
     } while (valid_input==0);
     if (scale == 'C'){
-        temperature = temperature*9/5 + 32;
+        converted_temp = temperature*9/5 + 32;
+        printf("%.1f°C is equal to %.1f°F\n", temperature, converted_temp);
+    } else if (scale == 'F'){
+         converted_temp = (temperature-32) * 5/9;
+         printf("%.1f°F is equal to %.1f°C\n", temperature, converted_temp);
     }
 
-        
         // TODO: Use fgets to read the input
         
         // TODO: Remove the newline character from input
@@ -51,7 +56,6 @@ int main(void) {
         
         // TODO: If input is valid, set valid_input = 1
         // If invalid, print an error message
-    
     
     // TODO: Perform conversion based on the input scale
     // - If Celsius, convert to Fahrenheit: F = C * 9/5 + 32
