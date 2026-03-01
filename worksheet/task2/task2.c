@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h> //for toupper
 
 int main(void){
 	long decimal=0;
@@ -17,20 +18,21 @@ int main(void){
 	printf("Enter a hexadecimal:");
 	scanf(" %s",hex);
 
+
 	// if input contains invalid hex digit
 	// printf("Error: Invalid Hexadecimal\n");
 	for (int i=0;i<strlen(hex);i++){
-		if (hex[i]=='A'){
+		if (toupper(hex[i])=='A'){ //converts letters to respective numbers
 			digit=10;
-		} else if (hex[i]=='B'){
+		} else if (toupper(hex[i])=='B'){
 			digit=11;
-		} else if (hex[i]=='C'){
+		} else if (toupper(hex[i])=='C'){
 			digit=12;
-		} else if (hex[i]=='D'){
+		} else if (toupper(hex[i])=='D'){
 			digit=13;
-		} else if (hex[i]=='E'){
+		} else if (toupper(hex[i])=='E'){
 			digit=14;
-		} else if (hex[i]=='F'){
+		} else if (toupper(hex[i])=='F'){
 			digit=15;
 		} else if (hex[i] >= '0' && hex[i]<='9'){
 			digit=hex[i] - '0';
@@ -46,4 +48,5 @@ int main(void){
 	
 	return 0;
 }
+//possible hex
 //0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
